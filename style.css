@@ -1,0 +1,171 @@
+::-webkit-scrollbar {
+  width: 2px; /* thickness */
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ce0b0b;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+body {
+    color: #ffffff;
+    background-image: radial-gradient(circle 5px at top left, rgba(73,35,199, 0.65) 0%, rgba(73,35,199, 0.65) 50%,rgba(238,236,236, 0.06) 50%, rgba(238,236,236, 0.06) 30%,transparent 30%, transparent 50%),linear-gradient(90deg, rgb(38,11,11),rgb(38,11,11)); background-size: 11px 11px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: #000431;
+    margin-top:2vh;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vh;
+    height:10vh;
+    padding:10px;
+    justify-content: center;
+    align-items: center;
+    border-radius:  0.9rem 0.9rem 0 0;
+    border-bottom: none;
+    border: 2px blueviolet solid;
+    box-shadow: 0 0 10px 1px hsla(272, 28%, 75%, 0.822);
+    z-index: 1000;
+}
+.content{
+  z-index: 9;
+  top:11vh;
+  position: absolute;  
+  background-color: #000431;
+  margin-top:1vh;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90vh;
+  height:80vh;
+  padding:10px;
+  border-radius: 0 0 0.9rem 0.9rem;
+  border-bottom: none;
+  border: 2px blueviolet solid;
+  box-shadow: 0 0 10px hsla(272, 28%, 75%, 0.822);
+  overflow-y: auto;
+}
+.addToList{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.AddInput{
+  margin-left: 1rem;
+  border: hsl(240, 56%, 43%) 2px solid;
+  border-radius: 5rem;
+  animation: input 1s ease forwards;
+  text-align: center;
+  height: 2.5rem;
+  width: 20rem;
+ font-weight: bolder;
+}
+@keyframes input {
+  from{
+    opacity: -1%;
+    transform: scale(1.0);
+  }
+
+  to{
+  transform: scale(1.1);
+  }
+}
+.btnAddList {
+  background-color: rgb(201, 206, 192);
+  border: none ;
+  margin-left: 10px;
+  border-radius: 100px;
+  padding: 10px;
+  transition: transform 0.2s ease-in-out;
+  will-change: transform;
+}
+.btnAddList:hover{
+  transform: scale(1.1);
+}
+.btnAddList:active{
+  background-color: chartreuse;
+  transform: scale(0.9);
+}
+.checkBox{
+  cursor: pointer;
+}
+input[type="checkbox"]{
+  
+  background-color: red;
+  position: relative;
+  top: 2.5px;
+  height: 20px;
+  width:20px;
+}
+span {
+  max-width: 70vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-left: 1rem;
+  font-weight: bolder;
+  color: yellow;
+}
+.todo{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 2vh;
+  padding: 1rem;
+  border: 2px solid rgb(253, 239, 239);
+  border-radius: 0.4rem;
+}
+.task{
+  flex: 1;
+  overflow: auto;
+}
+.t1ext{
+  position: absolute;
+  left: 9vh;
+display:flex;
+justify-content:center;
+margin-top: 1rem;
+margin-right: 1rem;
+font-size: 2rem;
+position: relative;
+}
+.deleteBtn,.editBtn{
+  padding: 0.4rem;
+  border-radius:0.4rem;
+  font-size: small;
+  font-weight: bolder;
+  outline: none;
+  border: solid 1px rgb(91, 230, 11);
+  background-color: hsl(98, 100%, 50%);
+}
+
+
+.deleteBtn{
+  margin-right: 0.5rem;
+}
+
+
+.deleteBtn:active{
+  transform: scale(1.1);
+  background-color: red;
+}
+.editBtn:active{
+  transform: scale(1.1);
+  background-color: rgba(5, 255, 201, 0.466);
+}
+
+
+
